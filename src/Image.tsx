@@ -6,7 +6,6 @@ const FrameImage = styled.div`
   position: relative;
   border-radius: 1rem;
   overflow: hidden;
-  margin: auto;
 `;
 const LazyImage = styled.img<{ visible: number; mode: string }>`
   max-width: 100%;
@@ -44,12 +43,14 @@ export const Image: React.FC<Props> = ({ preSrc, src, mode = "svg" }) => {
         alt={"placeholder"}
         visible={visible ? 1 : 0}
         mode={mode}
+        loading="lazy"
       />
       <MainImage
         src={src}
         alt="jpg"
         visible={visible ? 0 : 1}
         onLoad={handleOnLoad}
+        loading="lazy"
       />
     </FrameImage>
   );
