@@ -10,14 +10,14 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 const Container = styled.div`
-  min-height: 300vh;
+  min-height: 100vh;
   max-width: 1280px;
   margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 2rem;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
 `;
 function App() {
   return (
